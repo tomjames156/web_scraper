@@ -1,2 +1,3 @@
-# web_scraper
-A web scraper that extracts quotes and the others and displays them in a structured format
+# Web Scraper
+
+A web scraper that uses Python to extract quotes and the authors, then displays them in a structured format
