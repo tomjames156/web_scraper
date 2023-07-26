@@ -26,10 +26,31 @@ def get_languages_sentence(html_text):
     languages_list = get_languages_list(html_text)
     final = languages_list.pop()
     shortened_list = languages_list
-    languages_text = ''
+    languages_sentence = ''
     for language in shortened_list:
-        languages_text += f"{language}, "
+        languages_sentence += f"{language}, "
     
-    languages_text += f"and {final}."
+    languages_sentence += f"and {final}."
 
-    return languages_text
+    return languages_sentence
+
+
+def get_languages_str(html_text):
+    "Returns a str of languages used separated by commas"
+    languages_list = get_languages_list(html_text)
+    final = languages_list.pop()
+    shortened_list = languages_list
+    languages_str = ''
+    for language in shortened_list:
+        languages_str += f"{language}, "
+    
+    languages_str += f"{final}"
+
+    return languages_str
+
+
+print(get_languages_str("""<div class="languages">
+<i class="fa-brands fa-html5"></i>
+<i class="fa-brands fa-css3-alt"></i>
+<i class="fa-brands fa-square-js"></i>
+</div>"""))
